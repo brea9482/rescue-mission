@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="large-12">
+    <h1>Answer</h1>
+
+    <h3>Original Question:</h3>
+    <%= @question.name%>
+
+    <h3>Write your answer below:</h3>
+    <%= form_for [@question, @answer] do |f| %>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+      <%= f.submit "Add your answer!" %>
+    <% end %>
+  </div>
+</div>
